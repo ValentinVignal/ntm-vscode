@@ -1,0 +1,162 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "foldingStartMarker": "\\{\\s*$",
+  "foldingStopMarker": "^\\s*\\}",
+  "name": "NTM",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#punctuation"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#constants-and-special-vars"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "class-identifier": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "support.class.ntm"
+            }
+          },
+          "match": "(?<![a-zA-Z0-9_])([_]*[A-Z][a-zA-Z0-9_]*)"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "include": "#comments-inline"
+        }
+      ]
+    },
+    "comments-inline": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "comment.line.double-slash.ntm"
+            }
+          },
+          "match": "((//).*)$"
+        }
+      ]
+    },
+    "constants-and-special-vars": {
+      "patterns": [
+        {
+          "match": "(?<!\\$)\\b(true|false|null)\\b(?!\\$)",
+          "name": "constant.language.ntm"
+        },
+        {
+          "match": "(?<!\\$)\\b(this|super)\\b(?!\\$)",
+          "name": "variable.language.ntm"
+        },
+        {
+          "match": "(?<!\\$)\\b([0-9]+\\.?[0-9]*)\\b(?!\\$)",
+          "name": "constant.numeric.ntm"
+        },
+        {
+          "include": "#class-identifier"
+        },
+        {
+          "include": "#function-identifier"
+        }
+      ]
+    },
+    "function-identifier": {
+      "patterns": [
+        {
+          "captures": {
+            "1": {
+              "name": "entity.name.function.ntm"
+            }
+          },
+          "match": "([_$]*[a-z][a-zA-Z0-9_$]*)(\\()"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(else|for|if|print|return|while)\\b",
+          "name": "keyword.control.ntm"
+        },
+        {
+          "match": "(?<!\\$)\\b(class|fun)\\b(?!\\$)",
+          "name": "keyword.declaration.ntm"
+        },
+        {
+          "match": "(==|!=|<=?|>=?)",
+          "name": "keyword.operator.comparison.ntm"
+        },
+        {
+          "match": "(=)",
+          "name": "keyword.operator.assignment.ntm"
+        },
+        {
+          "match": "(\\-|\\+|\\*|\\/)",
+          "name": "keyword.operator.arithmetic.ntm"
+        },
+        {
+          "match": "(!|&&|\\|\\|)",
+          "name": "keyword.operator.logical.ntm"
+        },
+        {
+          "match": "(?<!\\$)\\bvar\\b(?!\\$)",
+          "name": "storage.type.primitive.ntm"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "\\+|\\-|\\*|\\/|\\=|\\<|\\>|\\!|\\&\\&|\\|\\|",
+          "name": "keyword.operator.ntm"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "match": ",",
+          "name": "punctuation.comma.ntm"
+        },
+        {
+          "match": ";",
+          "name": "punctuation.terminator.ntm"
+        },
+        {
+          "match": "\\.",
+          "name": "punctuation.dot.ntm"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "begin": "'",
+          "end": "'",
+          "name": "string.quoted.single.dart",
+          "patterns": [
+            {
+              "match": "\\n",
+              "name": "invalid.string.newline"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "scopeName": "source.ntm"
+}
