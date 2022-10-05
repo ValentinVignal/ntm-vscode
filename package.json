@@ -1,0 +1,34 @@
+{
+  "name": "ntm",
+  "displayName": "NTM",
+  "description": "NTM Programming Language",
+  "version": "0.0.0",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ntm",
+        "aliases": [
+          "NTM",
+          "ntm"
+        ],
+        "extensions": [
+          ".ntm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ntm",
+        "scopeName": "source.ntm",
+        "path": "./syntaxes/ntm.tmLanguage.json"
+      }
+    ]
+  }
+}
