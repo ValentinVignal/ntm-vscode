@@ -82,7 +82,7 @@
               "name": "entity.name.function.ntm"
             }
           },
-          "match": "([_$]*[a-z][a-zA-Z0-9_$]*)(\\()"
+          "match": "([_]*[a-z][a-zA-Z0-9_$]*)(\\()"
         }
       ]
     },
@@ -91,6 +91,31 @@
         {
           "match": "\\b(else|for|if|print|return|while)\\b",
           "name": "keyword.control.ntm"
+        },
+        {
+          "captures": {
+            "2": {
+              "name": "keyword.declaration.ntm"
+            },
+            "3": {
+              "patterns": [
+                {
+                  "include": "#class-identifier"
+                }
+              ]
+            },
+            "4": {
+              "name": "keyword.declaration.ntm"
+            },
+            "5": {
+              "patterns": [
+                {
+                  "include": "#class-identifier"
+                }
+              ]
+            }
+          },
+          "match": "((class)\\s*([_]*[A-Z][a-zA-Z0-9]*)\\s*(<)\\s*([A-Z][a-zA-Z0-9]*\\s*){)"
         },
         {
           "match": "(?<!\\$)\\b(class|fun)\\b(?!\\$)",
