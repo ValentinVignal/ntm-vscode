@@ -2,6 +2,11 @@
   "name": "ntm",
   "displayName": "NTM",
   "description": "NTM Programming Language",
+  "publisher": "valentin-vignal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Novade/ntm-vscode.git"
+  },
   "version": "0.0.0",
   "engines": {
     "vscode": "^1.71.0"
