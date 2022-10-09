@@ -1,0 +1,293 @@
+>// Comment
+#^^^^^^^^^^ source.ntm comment.line.double-slash.ntm
+>
+>var a;
+#^^^ source.ntm storage.type.primitive.ntm
+#   ^^ source.ntm
+#     ^ source.ntm punctuation.terminator.ntm
+>
+>if (true || false && true) {
+#^^ source.ntm keyword.control.ntm
+#  ^^ source.ntm
+#    ^^^^ source.ntm constant.language.ntm
+#        ^ source.ntm
+#         ^^ source.ntm keyword.operator.logical.ntm
+#           ^ source.ntm
+#            ^^^^^ source.ntm constant.language.ntm
+#                 ^ source.ntm
+#                  ^^ source.ntm keyword.operator.logical.ntm
+#                    ^ source.ntm
+#                     ^^^^ source.ntm constant.language.ntm
+#                         ^^^^ source.ntm
+>  for (var i = 0; i < 10; i = i + 1) {
+#^^ source.ntm
+#  ^^^ source.ntm keyword.control.ntm
+#     ^^ source.ntm
+#       ^^^ source.ntm storage.type.primitive.ntm
+#          ^^^ source.ntm
+#             ^ source.ntm keyword.operator.assignment.ntm
+#              ^ source.ntm
+#               ^ source.ntm constant.numeric.ntm
+#                ^ source.ntm punctuation.terminator.ntm
+#                 ^^^ source.ntm
+#                    ^ source.ntm keyword.operator.comparison.ntm
+#                     ^ source.ntm
+#                      ^^ source.ntm constant.numeric.ntm
+#                        ^ source.ntm punctuation.terminator.ntm
+#                         ^^^ source.ntm
+#                            ^ source.ntm keyword.operator.assignment.ntm
+#                             ^^^ source.ntm
+#                                ^ source.ntm keyword.operator.arithmetic.ntm
+#                                 ^ source.ntm
+#                                  ^ source.ntm constant.numeric.ntm
+#                                   ^^^^ source.ntm
+>    var a = 1 + 2 - 3 * 4 / 5.6;
+#^^^^ source.ntm
+#    ^^^ source.ntm storage.type.primitive.ntm
+#       ^^^ source.ntm
+#          ^ source.ntm keyword.operator.assignment.ntm
+#           ^ source.ntm
+#            ^ source.ntm constant.numeric.ntm
+#             ^ source.ntm
+#              ^ source.ntm keyword.operator.arithmetic.ntm
+#               ^ source.ntm
+#                ^ source.ntm constant.numeric.ntm
+#                 ^ source.ntm
+#                  ^ source.ntm keyword.operator.arithmetic.ntm
+#                   ^ source.ntm
+#                    ^ source.ntm constant.numeric.ntm
+#                     ^ source.ntm
+#                      ^ source.ntm keyword.operator.arithmetic.ntm
+#                       ^ source.ntm
+#                        ^ source.ntm constant.numeric.ntm
+#                         ^ source.ntm
+#                          ^ source.ntm keyword.operator.arithmetic.ntm
+#                           ^ source.ntm
+#                            ^^^ source.ntm constant.numeric.ntm
+#                               ^ source.ntm punctuation.terminator.ntm
+>  }
+#^^^^ source.ntm
+>  print 'Hello World';
+#^^ source.ntm
+#  ^^^^^ source.ntm keyword.control.ntm
+#       ^ source.ntm
+#        ^ source.ntm string.quoted.single.dart
+#         ^^^^^^^^^^^ source.ntm string.quoted.single.dart
+#                    ^ source.ntm string.quoted.single.dart
+#                     ^ source.ntm punctuation.terminator.ntm
+>} else {
+#^^ source.ntm
+#  ^^^^ source.ntm keyword.control.ntm
+#      ^^^ source.ntm
+>  a = null;
+#^^^^ source.ntm
+#    ^ source.ntm keyword.operator.assignment.ntm
+#     ^ source.ntm
+#      ^^^^ source.ntm constant.language.ntm
+#          ^ source.ntm punctuation.terminator.ntm
+>}
+#^^ source.ntm
+>
+>fun myFunction(param1, param2) {
+#^^^ source.ntm keyword.declaration.ntm
+#   ^ source.ntm
+#    ^^^^^^^^^^ source.ntm entity.name.function.ntm
+#              ^ source.ntm
+#               ^^^^^^ source.ntm
+#                     ^ source.ntm punctuation.comma.ntm
+#                      ^^^^^^^^^^^ source.ntm
+>  return param1 + param2 + 3;
+#^^ source.ntm
+#  ^^^^^^ source.ntm keyword.control.ntm
+#        ^^^^^^^^ source.ntm
+#                ^ source.ntm keyword.operator.arithmetic.ntm
+#                 ^^^^^^^^ source.ntm
+#                         ^ source.ntm keyword.operator.arithmetic.ntm
+#                          ^ source.ntm
+#                           ^ source.ntm constant.numeric.ntm
+#                            ^ source.ntm punctuation.terminator.ntm
+>}
+#^^ source.ntm
+>
+>while (1 == 1 && 1 != 1 &&  1 < 1 && 1 <= 1 && 1 > 1 && 1 >= 1) {
+#^^^^^ source.ntm keyword.control.ntm
+#     ^^ source.ntm
+#       ^ source.ntm constant.numeric.ntm
+#        ^ source.ntm
+#         ^^ source.ntm keyword.operator.comparison.ntm
+#           ^ source.ntm
+#            ^ source.ntm constant.numeric.ntm
+#             ^ source.ntm
+#              ^^ source.ntm keyword.operator.logical.ntm
+#                ^ source.ntm
+#                 ^ source.ntm constant.numeric.ntm
+#                  ^ source.ntm
+#                   ^^ source.ntm keyword.operator.comparison.ntm
+#                     ^ source.ntm
+#                      ^ source.ntm constant.numeric.ntm
+#                       ^ source.ntm
+#                        ^^ source.ntm keyword.operator.logical.ntm
+#                          ^^ source.ntm
+#                            ^ source.ntm constant.numeric.ntm
+#                             ^ source.ntm
+#                              ^ source.ntm keyword.operator.comparison.ntm
+#                               ^ source.ntm
+#                                ^ source.ntm constant.numeric.ntm
+#                                 ^ source.ntm
+#                                  ^^ source.ntm keyword.operator.logical.ntm
+#                                    ^ source.ntm
+#                                     ^ source.ntm constant.numeric.ntm
+#                                      ^ source.ntm
+#                                       ^^ source.ntm keyword.operator.comparison.ntm
+#                                         ^ source.ntm
+#                                          ^ source.ntm constant.numeric.ntm
+#                                           ^ source.ntm
+#                                            ^^ source.ntm keyword.operator.logical.ntm
+#                                              ^ source.ntm
+#                                               ^ source.ntm constant.numeric.ntm
+#                                                ^ source.ntm
+#                                                 ^ source.ntm keyword.operator.comparison.ntm
+#                                                  ^ source.ntm
+#                                                   ^ source.ntm constant.numeric.ntm
+#                                                    ^ source.ntm
+#                                                     ^^ source.ntm keyword.operator.logical.ntm
+#                                                       ^ source.ntm
+#                                                        ^ source.ntm constant.numeric.ntm
+#                                                         ^ source.ntm
+#                                                          ^^ source.ntm keyword.operator.comparison.ntm
+#                                                            ^ source.ntm
+#                                                             ^ source.ntm constant.numeric.ntm
+#                                                              ^^^^ source.ntm
+>  myFunction(9, 10);
+#^^ source.ntm
+#  ^^^^^^^^^^ source.ntm entity.name.function.ntm
+#            ^ source.ntm
+#             ^ source.ntm constant.numeric.ntm
+#              ^ source.ntm punctuation.comma.ntm
+#               ^ source.ntm
+#                ^^ source.ntm constant.numeric.ntm
+#                  ^ source.ntm
+#                   ^ source.ntm punctuation.terminator.ntm
+>}
+#^^ source.ntm
+>
+>class SuperClass {
+#^^^^^ source.ntm keyword.declaration.ntm
+#     ^ source.ntm
+#      ^^^^^^^^^^ source.ntm support.class.ntm
+#                ^^^ source.ntm
+>  var a;
+#^^ source.ntm
+#  ^^^ source.ntm storage.type.primitive.ntm
+#     ^^ source.ntm
+#       ^ source.ntm punctuation.terminator.ntm
+>  init() {
+#^^ source.ntm
+#  ^^^^ source.ntm entity.name.function.ntm
+#      ^ source.ntm
+#       ^^^^ source.ntm
+>    this.a = 2;
+#^^^^ source.ntm
+#    ^^^^ source.ntm variable.language.ntm
+#        ^ source.ntm punctuation.dot.ntm
+#         ^^ source.ntm
+#           ^ source.ntm keyword.operator.assignment.ntm
+#            ^ source.ntm
+#             ^ source.ntm constant.numeric.ntm
+#              ^ source.ntm punctuation.terminator.ntm
+>  }
+#^^^^ source.ntm
+>
+>  method(b) {
+#^^ source.ntm
+#  ^^^^^^ source.ntm entity.name.function.ntm
+#        ^ source.ntm
+#         ^^^^^ source.ntm
+>    return a * b;
+#^^^^ source.ntm
+#    ^^^^^^ source.ntm keyword.control.ntm
+#          ^^^ source.ntm
+#             ^ source.ntm keyword.operator.arithmetic.ntm
+#              ^^ source.ntm
+#                ^ source.ntm punctuation.terminator.ntm
+>  }
+#^^^^ source.ntm
+>}
+#^^ source.ntm
+>
+>class SubClass < SuperClass {
+#^^^^^ source.ntm keyword.declaration.ntm
+#     ^ source.ntm
+#      ^^^^^^^^ source.ntm support.class.ntm
+#              ^ source.ntm
+#               ^ source.ntm keyword.declaration.ntm
+#                ^ source.ntm
+#                 ^^^^^^^^^^ source.ntm support.class.ntm
+#                           ^ source.ntm
+#                            ^ source.ntm
+>  var b;
+#^^ source.ntm
+#  ^^^ source.ntm storage.type.primitive.ntm
+#     ^^ source.ntm
+#       ^ source.ntm punctuation.terminator.ntm
+>  init(b) {
+#^^ source.ntm
+#  ^^^^ source.ntm entity.name.function.ntm
+#      ^ source.ntm
+#       ^^^^^ source.ntm
+>    this.b = b;
+#^^^^ source.ntm
+#    ^^^^ source.ntm variable.language.ntm
+#        ^ source.ntm punctuation.dot.ntm
+#         ^^ source.ntm
+#           ^ source.ntm keyword.operator.assignment.ntm
+#            ^^ source.ntm
+#              ^ source.ntm punctuation.terminator.ntm
+>    super.init();
+#^^^^ source.ntm
+#    ^^^^^ source.ntm variable.language.ntm
+#         ^ source.ntm punctuation.dot.ntm
+#          ^^^^ source.ntm entity.name.function.ntm
+#              ^ source.ntm
+#               ^ source.ntm
+#                ^ source.ntm punctuation.terminator.ntm
+>  }
+#^^^^ source.ntm
+>}
+#^^ source.ntm
+>
+>var subInstance = SubClass(2);
+#^^^ source.ntm storage.type.primitive.ntm
+#   ^^^^^^^^^^^^^ source.ntm
+#                ^ source.ntm keyword.operator.assignment.ntm
+#                 ^ source.ntm
+#                  ^^^^^^^^ source.ntm support.class.ntm
+#                          ^ source.ntm
+#                           ^ source.ntm constant.numeric.ntm
+#                            ^ source.ntm
+#                             ^ source.ntm punctuation.terminator.ntm
+>subInstance.method(10.3);
+#^^^^^^^^^^^ source.ntm
+#           ^ source.ntm punctuation.dot.ntm
+#            ^^^^^^ source.ntm entity.name.function.ntm
+#                  ^ source.ntm
+#                   ^^^^ source.ntm constant.numeric.ntm
+#                       ^ source.ntm
+#                        ^ source.ntm punctuation.terminator.ntm
+>var superInstance = SuperClass();
+#^^^ source.ntm storage.type.primitive.ntm
+#   ^^^^^^^^^^^^^^^ source.ntm
+#                  ^ source.ntm keyword.operator.assignment.ntm
+#                   ^ source.ntm
+#                    ^^^^^^^^^^ source.ntm support.class.ntm
+#                              ^^ source.ntm
+#                                ^ source.ntm punctuation.terminator.ntm
+>superInstance.method(4);
+#^^^^^^^^^^^^^ source.ntm
+#             ^ source.ntm punctuation.dot.ntm
+#              ^^^^^^ source.ntm entity.name.function.ntm
+#                    ^ source.ntm
+#                     ^ source.ntm constant.numeric.ntm
+#                      ^ source.ntm
+#                       ^ source.ntm punctuation.terminator.ntm
+>
