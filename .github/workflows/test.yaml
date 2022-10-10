@@ -1,0 +1,25 @@
+# Those names are github action authors.
+# cSpell:ignore subosito vignal
+on:
+  - pull_request
+
+name: Code analyze
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Check code spelling
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+      - run: npm i
+      - run: npm run test-language
+
+  spelling:
+    runs-on: ubuntu-latest
+    name: Check code spelling
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check spelling
+        uses: streetsidesoftware/cspell-action@v2

@@ -35,5 +35,11 @@
         "path": "./syntaxes/ntm.tmLanguage.json"
       }
     ]
+  },
+  "scripts": {
+    "test-language": "vscode-tmgrammar-snap src/test/language/**"
+  },
+  "devDependencies": {
+    "vscode-tmgrammar-test": "^0.1.1"
   }
 }
