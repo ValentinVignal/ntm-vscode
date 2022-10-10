@@ -33,6 +33,18 @@
         "language": "ntm",
         "scopeName": "source.ntm",
         "path": "./syntaxes/ntm.tmLanguage.json"
+      },
+      {
+        "injectTo": [
+          "source.dart",
+          "source.txt",
+          "source.graphql"
+        ],
+        "scopeName": "source.dart.ntm",
+        "path": "./syntaxes/ntm.dart.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.ntm": "ntm"
+        }
       }
     ]
   },

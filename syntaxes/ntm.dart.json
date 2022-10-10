@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "fileTypes": [
+    "dart",
+    "graphql"
+  ],
+  "injectionSelector": "L:source -string -comment",
+  "patterns": [
+    {
+      "begin": "(\"\"\"ntm)",
+      "contentName": "meta.embedded.block.ntm",
+      "end": "(\"\"\")",
+      "patterns": [
+        {
+          "include": "source.ntm"
+        }
+      ]
+    }
+  ],
+  "scopeName": "source.dart.ntm"
+}
